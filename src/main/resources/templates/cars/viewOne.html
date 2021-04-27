@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Kunde</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Kunde</h1>
+<section class="oneViewSection">
+  <div class="oneViewContainer">
+    <p>Car Type: <span th:text="${car.carType}"></span></p>
+    <p>brand: <span th:text="${car.brand}"></span></p>
+    <p>model: <span th:text="${car.model}"></span></p>
+    <p>RegNumberPlate: <span th:text="${car.regNumberPlate}"></span></p>
+    <p>First Reg Year Month: <span th:text="${car.firstRegYearMonth}"></span></p>
+    <p>kmDriven: <span th:text="${car.kmDriven}"></span></p>
+  </div>
+</section>
+</body>
+</html>

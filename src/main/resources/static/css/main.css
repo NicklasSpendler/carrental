@@ -230,11 +230,28 @@ p, a, button, span, input {
     margin-top: 30px;
 }
 
+.oneViewSection{
+    margin-top: 30px;
+}
+
 #oneViewCustomerContainer {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     width: 50%;
+}
+.oneViewContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 50%;
+}
+
+.oneViewContainer p{
+    padding: 10px;
+}
+.oneViewContainer p:nth-child(odd){
+    background-color: burlywood;
 }
 
 #oneViewCustomerContainer p{
@@ -277,6 +294,25 @@ p, a, button, span, input {
 }
 
 #updateCustomerContainer form input {
+    font-size: 17px;
+    padding: 14px 16px;
+    border: 1px solid black;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.updateSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #cecece;
+}
+
+.updateContainer form input {
     font-size: 17px;
     padding: 14px 16px;
     border: 1px solid black;
