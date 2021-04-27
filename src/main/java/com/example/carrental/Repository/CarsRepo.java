@@ -21,6 +21,8 @@ public class CarsRepo {
     }
 
     public Cars addCar(Cars c) {
+        String sql = "INSERT INTO cars VALUES(?, ?, ?, ?, ?, ?, ?)";
+        template.update(sql, c.getCarID(), c.getCarType(), c.getBrand(), c.getModel(), c.getRegNumberPlate(), c.getFirstRegYearMonth() , c.getKmDriven());
         return null;
     }
 

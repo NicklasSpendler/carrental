@@ -26,6 +26,17 @@ public class CarsController {
         return "cars/index";
     }
 
+    @GetMapping("/createCar")
+    public String create() {
+        return "cars/createCar";
+    }
+
+    @PostMapping("/createCar")
+    public String createCars(@ModelAttribute Cars car) {
+        carsService.addCars(car);
+        return "redirect:/cars";
+    }
+
     @GetMapping("/viewOneCar/{carID}")
     public String viewCar(@PathVariable("carID") int carID, Model model){
         model.addAttribute("car", carsService.findCarsById(carID));

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Opret Bil</h1>
+<section id="updateCustomerSection">
+  <div id="updateCustomerContainer">
+    <h1>Opret Ny Bil</h1>
+    <form action="/createCar" method="post">
+      <input required placeholder="Car Type" type="text" name="carType">
+      <input required placeholder="Brand" type="text" name="brand">
+      <input required placeholder="Model" type="text" name="model">
+      <input required placeholder="Reg Number Plate" type="text" name="regNumberPlate">
+      <input required placeholder="First Reg Year Month (yyyymmdd)" type="date" name="firstRegYearMonth">
+      <input required placeholder="Kilometer kørt" type="number" name="kmDriven">
+      <input type="submit" value="Opret Ny Bil">
+    </form>
+  </div>
+</section>
+
+</body>
+</html>
