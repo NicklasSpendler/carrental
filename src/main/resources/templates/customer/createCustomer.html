@@ -10,7 +10,7 @@
 <section id="createCustomerSection">
     <div id="createCustomerContainer">
         <h1>Opret Ny Kunde</h1>
-        <form action="/createCar" method="post">
+        <form action="/createCustomer" method="post">
             <input required placeholder="Fornavn" type="text" name="firstName">
             <input required placeholder="Efternavn" type="text" name="lastName">
             <input required placeholder="Postnummer" type="text" name="zipCode" maxlength="4">
@@ -19,8 +19,6 @@
             <input required placeholder="Mobil Nr" type="number" name="mobileNr">
             <input required placeholder="Email" type="text" name="email">
             <input required placeholder="Kørekort" type="number" name="DriversLicenceNumber">
-            <label style="color: white; font-family: 'Roboto', sans-serif; letter-spacing: 2px;">Kunde siden dato</label>
-            <input required type="date" title="Kunde siden dato" name="CustomerSinceDate">
             <input type="submit" value="Opret Kunde">
         </form>
     </div>
