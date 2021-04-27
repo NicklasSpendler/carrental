@@ -31,10 +31,12 @@ public class CarsRepo {
     }
 
     public Boolean deleteCar(int id) {
-        return null;
+        String sql = "DELETE FROM cars WHERE carID = ?";
+        return template.update(sql,id) > 0;
     }
 
-    public Cars updateCar (int id, Cars c) {
-        return null;
+    public void updateCar (int id, Cars c) {
+        String sql = "UPDATE cars SET carType = ?,brand = ?,model = ?,regNumberPlate = ?,firstRegYearMonth = ?,kmDriven = ? where carID = ?";
+        template.update(sql ,c.getCarType(), c.getBrand(), c.getModel(), c.getRegNumberPlate(), c.getFirstRegYearMonth(), c.getKmDriven(), c.getCarID());
     }
 }
