@@ -29,7 +29,7 @@ public class CarsService {
         return carsRepo.deleteCar(id);
     }
 
-    public Cars updateCar (int id, Cars c) {
-        return carsRepo.updateCar(id, c);
+    public void updateCar (int id, Cars c) {
+        carsRepo.updateCar(id, c);
     }
 }

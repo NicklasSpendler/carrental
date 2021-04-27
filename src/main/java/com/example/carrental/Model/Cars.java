@@ -28,6 +28,19 @@ public class Cars {
         this.kmDriven = kmDriven;
     }
 
+    @Override
+    public String toString() {
+        return "Cars{" +
+                "carID=" + carID +
+                ", carType='" + carType + '\'' +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", regNumberPlate='" + regNumberPlate + '\'' +
+                ", firstRegYearMonth='" + firstRegYearMonth + '\'' +
+                ", kmDriven=" + kmDriven +
+                '}';
+    }
+
     public int getCarID() {
         return carID;
     }
