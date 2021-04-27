@@ -175,6 +175,10 @@ p, a, button, span, input {
     height: 100%;
 }
 
+.dplay-none {
+    display: none;
+}
+
 #customerSection {
     display: flex;
 }

@@ -9,8 +9,9 @@
 
 <section id="updateCustomerSection">
     <div id="updateCustomerContainer">
-        <h1>Opdate Kunde</h1>
-        <form action="#" method="post">
+        <h1>Opdater Kunde</h1>
+        <form action="/updateOneCustomer" method="post">
+            <input class="dplay-none" type="text" name="customerID" th:value="${customer.customerID}">
             <input type="text" name="firstName" th:value="${customer.firstName}">
             <input type="text" name="lastName" th:value="${customer.lastName}">
             <input type="text" name="zipCode" th:value="${customer.zipCode}">
@@ -20,6 +21,7 @@
             <input type="text" name="email" th:value="${customer.email}">
             <input type="text" name="DriversLicenceNumber" th:value="${customer.driversLicenceNumber}">
             <input type="text" name="CustomerSinceDate" th:value="${customer.customerSinceDate}">
+            <input type="submit" value="Opdater Kunde">
         </form>
 
     </div>

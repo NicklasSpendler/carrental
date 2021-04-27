@@ -26,7 +26,7 @@
             <div>
                 <a th:href="@{'/viewOneCustomer/'+${customer.customerID}}"><i title="Se Kunde" class="fas fa-user"></i></a>
                 <a th:href="@{'/updateOneCustomer/'+${customer.customerID}}"><i title="Rediger Kunde" class="fas fa-user-edit"></i></a>
-                <a><i title="Slet Kunde" class="fas fa-user-minus"></i></a>
+                <a th:href="@{'/deleteCustomer/'+${customer.customerID}}"><i title="Slet Kunde" class="fas fa-user-minus"></i></a>
             </div>
         </div>
     </div>

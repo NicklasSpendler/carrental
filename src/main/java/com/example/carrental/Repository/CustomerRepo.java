@@ -31,10 +31,13 @@ public class CustomerRepo {
     }
 
     public Boolean deleteCustomer(int id) {
-        return null;
+        String sql = "DELETE FROM privatecustomer WHERE customerID = ?";
+        return template.update(sql,id) > 0;
     }
 
     public Customer updatePerson (int id, Customer c) {
+        String sql = "UPDATE privatecustomer SET firstName = ?, lastName = ?, zipCode = ?, cityName = ?, adress = ?, mobileNr = ?, email = ?, driversLicenceNumber = ?, CustomerSinceDate = ? WHERE customerID = ?";
+        template.update(sql, c.getFirstName(), c.getLastName(), c.getZipCode(), c.getCityName(), c.getAdress(), c.getMobileNr(), c.getEmail(), c.getDriversLicenceNumber(), c.getCustomerSinceDate(), id);
         return null;
     }
 }
