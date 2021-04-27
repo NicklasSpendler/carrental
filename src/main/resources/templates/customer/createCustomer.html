@@ -11,15 +11,15 @@
   <div id="createCustomerContainer">
     <h1>Opdater Kunde</h1>
     <form action="/createCustomer" method="post">
-      <input placeholder="Fornavn" type="text" name="firstName">
-      <input placeholder="Efternavn" type="text" name="lastName">
-      <input placeholder="Postnummer" type="text" name="zipCode" maxlength="4">
-      <input placeholder="By navn" type="text" name="cityName">
-      <input placeholder="Adresse" type="text" name="adress">
-      <input placeholder="Mobil Nr" type="number" name="mobileNr">
-      <input placeholder="Email" type="text" name="email">
-      <input placeholder="Kørekort" type="number" name="DriversLicenceNumber">
-      <input placeholder="Kunde siden (yyyymmdd)" type="text" name="CustomerSinceDate">
+      <input required placeholder="Fornavn" type="text" name="firstName">
+      <input required placeholder="Efternavn" type="text" name="lastName">
+      <input required placeholder="Postnummer" type="text" name="zipCode" maxlength="4">
+      <input required placeholder="By navn" type="text" name="cityName">
+      <input required placeholder="Adresse" type="text" name="adress">
+      <input required placeholder="Mobil Nr" type="number" name="mobileNr">
+      <input required placeholder="Email" type="text" name="email">
+      <input required placeholder="Kørekort" type="number" name="DriversLicenceNumber">
+      <input required placeholder="Kunde siden (yyyymmdd)" type="text" name="CustomerSinceDate">
       <input type="submit" value="Tilføj Kunde">
     </form>
   </div>
