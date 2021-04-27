@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Kunde</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Kunde</h1>
+<section id="oneViewCustomerSection">
+    <div id="oneViewCustomerContainer">
+        <p>Navn: <span th:text="${customer.firstName}"></span> <span th:text="${customer.lastName}"></span></p>
+        <p>Postnummer: <span th:text="${customer.zipCode}"></span></p>
+        <p>By: <span th:text="${customer.cityName}"></span></p>
+        <p>Adresse: <span th:text="${customer.adress}"></span></p>
+        <p>Mobil: <span th:text="${customer.mobileNr}"></span></p>
+        <p>Email: <span th:text="${customer.email}"></span></p>
+        <p>Korekort: <span th:text="${customer.driversLicenceNumber}"></span></p>
+        <p>Kunde siden: <span th:text="${customer.CustomerSinceDate}"></span></p>
+    </div>
+</section>
+</body>
+</html>
