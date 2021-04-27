@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Opret Kunde</h1>
+<section id="createCustomerSection">
+  <div id="createCustomerContainer">
+    <h1>Opdater Kunde</h1>
+    <form action="/createCustomer" method="post">
+      <input placeholder="Fornavn" type="text" name="firstName">
+      <input placeholder="Efternavn" type="text" name="lastName">
+      <input placeholder="Postnummer" type="text" name="zipCode" maxlength="4">
+      <input placeholder="By navn" type="text" name="cityName">
+      <input placeholder="Adresse" type="text" name="adress">
+      <input placeholder="Mobil Nr" type="number" name="mobileNr">
+      <input placeholder="Email" type="text" name="email">
+      <input placeholder="Kørekort" type="number" name="DriversLicenceNumber">
+      <input placeholder="Kunde siden (yyyymmdd)" type="text" name="CustomerSinceDate">
+      <input type="submit" value="Tilføj Kunde">
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

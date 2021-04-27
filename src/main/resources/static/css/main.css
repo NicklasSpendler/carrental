@@ -262,13 +262,13 @@ p, a, button, span, input {
     background-color: burlywood;
 }
 
-#updateCustomerContainer form {
+#updateCustomerContainer form, #createCustomerContainer form {
     display: flex;
     flex-direction: column;
 
 }
 
-#updateCustomerContainer {
+#updateCustomerContainer, #createCustomerContainer {
     max-width: 500px;
     width: 100%;
     padding: 30px;
@@ -277,13 +277,13 @@ p, a, button, span, input {
     border-radius: 20px;
 }
 
-#updateCustomerContainer h1{
+#updateCustomerContainer h1, #createCustomerContainer h1{
     margin-bottom: 20px;
     color: white;
     text-transform: uppercase;
 }
 
-#updateCustomerSection {
+#updateCustomerSection, #createCustomerSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -293,7 +293,7 @@ p, a, button, span, input {
     background-color: #cecece;
 }
 
-#updateCustomerContainer form input {
+#updateCustomerContainer form input, #createCustomerContainer form input {
     font-size: 17px;
     padding: 14px 16px;
     border: 1px solid black;

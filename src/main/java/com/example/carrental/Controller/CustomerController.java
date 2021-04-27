@@ -24,6 +24,17 @@ public class CustomerController {
         return "customer/index";
     }
 
+    @GetMapping("/createCustomer")
+    public String create() {
+        return "customer/createCustomer";
+    }
+
+    @PostMapping("/createCustomer")
+    public String createPerson(@ModelAttribute Customer customer) {
+        customerService.addCustomer(customer);
+        return "redirect:/customers";
+    }
+
     @GetMapping("/viewOneCustomer/{customerID}")
     public String viewOne(@PathVariable("customerID") int customerID, Model model){
         model.addAttribute("customer", customerService.findCustomerById(customerID));
