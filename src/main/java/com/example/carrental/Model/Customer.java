@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Customer {
     @Id
     private int customerID;
-    private String firstName;
+    String firstName;
     private String lastName;
     private int zipCode;
     private String cityName;

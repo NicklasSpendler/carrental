@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Kunder</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+<h1>Se bookings</h1>
+
+<section id="customerSection">
+  <div id="customerContainer">
+    <div id="tableHead">
+      <p class="tableHeadData">Booking ID</p>
+      <p class="tableHeadData">Kunde Fornavn</p>
+      <p class="tableHeadData">Kunde Efternavn</p>
+      <p class="tableHeadData">Bil ID</p>
+      <p class="tableHeadData">Bil Model</p>
+      <p class="tableHeadData">Ekstra</p>
+    </div>
+    <div class="customer" th:each="booking: ${bookingList}">
+      <p th:text="${booking.bookingID}"></p>
+      <p th:text="${booking.firstName}"></p>
+      <p th:text="${booking.lastName}"></p>
+      <p th:text="${booking.carID}"></p>
+      <p th:text="${booking.model}"></p>
+      <div>
+        <a th:href="@{'/deleteBooking/'+${booking.bookingID}}"><i title="Slet booking" class="fas fa-user-minus"></i></a>
+      </div>
+    </div>
+    <a href="/createCustomer"><button>Tilføj Kunde</button></a>
+  </div>
+</section>
+
+</body>
+</html>
