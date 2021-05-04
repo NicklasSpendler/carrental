@@ -1,7 +1,9 @@
 package com.example.carrental.Controller;
 
 import com.example.carrental.Model.Booking;
+import com.example.carrental.Model.Customer;
 import com.example.carrental.Service.BookingService;
+import com.example.carrental.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,7 @@ public class BookingController {
 
     @Autowired
     BookingService bookingService;
+    CustomerService customerService;
 
 
     @GetMapping("/booking")
@@ -33,6 +36,13 @@ public class BookingController {
             System.out.println("Noget gik galt");
         }
         return "redirect:/booking";
+    }
+
+    @GetMapping("/booking/createBooking")
+    public String createBooking(Model model){
+        List<Customer> customerList = customerService.fetchAll();
+        model.addAttribute("customerList", customerList);
+        return "booking/createBooking";
     }
 
 

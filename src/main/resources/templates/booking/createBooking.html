@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<section id="customerSection">
+    <div id="customerContainer">
+        <div id="tableHead">
+            <p class="tableHeadData">Navn</p>
+            <p class="tableHeadData">Efternavn</p>
+            <p class="tableHeadData">mobilnummer</p>
+            <p class="tableHeadData">Email</p>
+            <p class="tableHeadData">Ekstra</p>
+        </div>
+        <div class="customer" th:each="customer: ${customerList}">
+            <p th:text="${customer.firstName}"></p>
+            <p th:text="${customer.lastName}"></p>
+            <p th:text="${customer.mobileNr}"></p>
+            <p th:text="${customer.email}"></p>
+            <div>
+                <a th:href="@{'/viewOneCustomer/'+${customer.customerID}}"><i title="Se Kunde" class="fas fa-user"></i></a>
+                <a th:href="@{'/updateOneCustomer/'+${customer.customerID}}"><i title="Rediger Kunde" class="fas fa-user-edit"></i></a>
+                <a th:href="@{'/deleteCustomer/'+${customer.customerID}}"><i title="Slet Kunde" class="fas fa-user-minus"></i></a>
+            </div>
+        </div>
+        <a href="/booking/createBooking"><button>Tilføj Booking</button></a>
+    </div>
+</section>
+
+<!--
+<h1>Opret Booking</h1>
+<section id="updateBookingSection">
+    <div id="updateBookingContainer">
+        <h1>Opret Ny Bil</h1>
+        <form action="/createBooking" method="post">
+            <input required placeholder="" type="text" name="carType">
+            <input required placeholder="Brand" type="text" name="brand">
+            <input required placeholder="Model" type="text" name="model">
+            <input required placeholder="Reg Number Plate" type="text" name="regNumberPlate">
+            <input required placeholder="First Reg Year Month (yyyymmdd)" type="date" name="firstRegYearMonth">
+            <input required placeholder="Kilometer kørt" type="number" name="kmDriven">
+            <input type="submit" value="Opret Ny Bil">
+        </form>
+    </div>
+</section>
+-->
+
+</body>
+</html>
