@@ -39,6 +39,7 @@ label {
 /* Home index */
 #homeSection {
     display: flex;
+    padding: 0!important;
 }
 
 #homeSection #customerContainer {
