@@ -26,6 +26,7 @@
       <p th:text="${booking.carID}"></p>
       <p th:text="${booking.model}"></p>
       <div>
+        <a th:href="@{'/updateBooking/'+${booking.bookingID}}"><i title="Rediger booking" class="fas fa-user-edit"></i></a>
         <a th:href="@{'/deleteBooking/'+${booking.bookingID}}"><i title="Slet booking" class="fas fa-user-minus"></i></a>
       </div>
     </div>

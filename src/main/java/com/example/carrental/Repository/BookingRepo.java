@@ -15,19 +15,19 @@ public class BookingRepo {
     JdbcTemplate template;
 
     public List<Booking> fetchAll() {
-        String sql = "SELECT bookingID, booking.customerID, firstName, lastName, model, booking.carID FROM carrental.booking JOIN privatecustomer ON booking.customerID = privatecustomer.customerID JOIN cars ON booking.carID = cars.carID";
+        String sql = "SELECT bookingID, booking.customerID, firstName, lastName, model, booking.carID FROM carrental.booking JOIN privatecustomer ON booking.customerID = privatecustomer.customerID JOIN cars ON booking.carID = cars.carID order by bookingID";
         RowMapper<Booking> rowMapper = new BeanPropertyRowMapper<>(Booking.class);
         return template.query(sql, rowMapper);
     }
 
-    /*
-    public Booking addCar(Booking c) {
-        String sql = "INSERT INTO cars VALUES(?, ?, ?, ?, ?, ?, ?)";
-        template.update(sql, c.getCarID(), c.getCarType(), c.getBrand(), c.getModel(), c.getRegNumberPlate(), c.getFirstRegYearMonth() , c.getKmDriven());
+
+    public Booking addBooking(Booking c) {
+        String sql = "INSERT INTO booking VALUES(?,?, ?, ?, ?)";
+        template.update(sql, c.getBookingID(), c.getCustomerID(), c.getCarID(), c.getRentDate(), c.getReturnDate());
         return null;
     }
 
-     */
+
 
     public Booking findBookingByID(int id) {
         String sql = "SELECT * FROM booking WHERE bookingID = ?";
@@ -40,10 +40,10 @@ public class BookingRepo {
         return template.update(sql,id) > 0;
     }
 
-    /*
-    public void updateCar (int id, Cars c) {
-        String sql = "UPDATE cars SET carType = ?,brand = ?,model = ?,regNumberPlate = ?,firstRegYearMonth = ?,kmDriven = ? where carID = ?";
-        template.update(sql ,c.getCarType(), c.getBrand(), c.getModel(), c.getRegNumberPlate(), c.getFirstRegYearMonth(), c.getKmDriven(), c.getCarID());
+
+    public void updateBooking (int id, Booking b) {
+        String sql = "UPDATE booking SET rentDate = ?,returnDate = ? WHERE bookingID = ?";
+        template.update(sql ,b.getRentDate(), b.getReturnDate(), id);
     }
-     */
+
 }

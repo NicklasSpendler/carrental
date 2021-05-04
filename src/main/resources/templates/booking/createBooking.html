@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
 <body>
 
@@ -13,21 +14,16 @@
             <p class="tableHeadData">Navn</p>
             <p class="tableHeadData">Efternavn</p>
             <p class="tableHeadData">mobilnummer</p>
-            <p class="tableHeadData">Email</p>
             <p class="tableHeadData">Ekstra</p>
         </div>
         <div class="customer" th:each="customer: ${customerList}">
             <p th:text="${customer.firstName}"></p>
             <p th:text="${customer.lastName}"></p>
             <p th:text="${customer.mobileNr}"></p>
-            <p th:text="${customer.email}"></p>
             <div>
-                <a th:href="@{'/viewOneCustomer/'+${customer.customerID}}"><i title="Se Kunde" class="fas fa-user"></i></a>
-                <a th:href="@{'/updateOneCustomer/'+${customer.customerID}}"><i title="Rediger Kunde" class="fas fa-user-edit"></i></a>
-                <a th:href="@{'/deleteCustomer/'+${customer.customerID}}"><i title="Slet Kunde" class="fas fa-user-minus"></i></a>
+                <a th:href="@{'/chooseOneCar/'+${customer.customerID}}"><i title="Vælg kunde" class="fas fa-user"></i></a>
             </div>
         </div>
-        <a href="/booking/createBooking"><button>Tilføj Booking</button></a>
     </div>
 </section>
 

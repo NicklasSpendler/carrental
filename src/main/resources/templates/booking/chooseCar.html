@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vælg bil</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+<h1>Vælg bil</h1>
+<p><span th:text="${customerID}"></span></p>
+<section id="customerSection">
+    <div id="customerContainer">
+        <div id="tableHead">
+            <p class="tableHeadData">Type</p>
+            <p class="tableHeadData">Brand</p>
+            <p class="tableHeadData">Model</p>
+            <p class="tableHeadData">Reg Number</p>
+            <p class="tableHeadData">First Reg Year Month</p>
+            <p class="tableHeadData">Kilometer kørt</p>
+            <p class="tableHeadData">Ekstra</p>
+        </div>
+        <div class="customer" th:each="car: ${carList}">
+            <p th:text="${car.carType}"></p>
+            <p th:text="${car.brand}"></p>
+            <p th:text="${car.model}"></p>
+            <p th:text="${car.regNumberPlate}"></p>
+            <p th:text="${car.firstRegYearMonth}"></p>
+            <p th:text="${car.kmDriven}"></p>
+            <div>
+                <a th:href="@{'/chooseBookingDates/'+${customerID}+'/'+${car.carID}}"><i title="Se Bil" class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

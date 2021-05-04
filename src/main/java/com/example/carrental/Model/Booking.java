@@ -10,6 +10,9 @@ public class Booking {
     int bookingID;
     int customerID;
     int carID;
+    String rentDate;
+    String returnDate;
+
 
 
     String firstName;
@@ -20,10 +23,12 @@ public class Booking {
 
     }
 
-    public Booking(int bookingID, int customerID, int carID, String firstName, String lastName, String model) {
+    public Booking(int bookingID, int customerID, int carID, String rentDate, String returnDate, String firstName, String lastName, String model) {
         this.bookingID = bookingID;
         this.customerID = customerID;
         this.carID = carID;
+        this.rentDate = rentDate;
+        this.returnDate = returnDate;
         this.firstName = firstName;
         this.lastName = lastName;
         this.model = model;
@@ -51,6 +56,22 @@ public class Booking {
 
     public void setCarID(int carID) {
         this.carID = carID;
+    }
+
+    public String getRentDate() {
+        return rentDate;
+    }
+
+    public void setRentDate(String rentDate) {
+        this.rentDate = rentDate;
+    }
+
+    public String getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(String returnDate) {
+        this.returnDate = returnDate;
     }
 
     public String getFirstName() {

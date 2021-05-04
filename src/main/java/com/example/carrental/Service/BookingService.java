@@ -26,15 +26,15 @@ public class BookingService {
         return bookingRepo.deleteBooking(id);
     }
 
-    /*
-    public Booking addCars(Booking c) {
-        return BookingRepo.addCar(c);
+
+    public Booking addBooking(Booking b) {
+        return bookingRepo.addBooking(b);
     }
-     */
-    /*
-    public void updateCar (int id, Booking c) {
-        BookingRepo.updateCar(id, c);
+
+
+    public void updateBooking (int id, Booking b) {
+        bookingRepo.updateBooking(id, b);
     }
-     */
+
 
 }
