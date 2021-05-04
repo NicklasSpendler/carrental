@@ -9,7 +9,7 @@
 
 <section class="updateSection">
   <div class="updateContainer">
-    <h1>Opdater Bil</h1>
+    <h1 class="text-center">Opdater Bil</h1>
     <form action="/updateOneCar" method="post">
       <input class="dplay-none" type="text" name="carID" th:value="${cars.carID}">
       <input type="text" name="carType" th:value="${cars.carType}">
@@ -18,7 +18,7 @@
       <input type="text" name="regNumberPlate" th:value="${cars.regNumberPlate}">
       <input type="text" name="firstRegYearMonth" th:value="${cars.firstRegYearMonth}">
       <input type="text" name="kmDriven" th:value="${cars.kmDriven}">
-      <input type="submit" value="Opdater Bil">
+      <input class="mt-10" type="submit" value="Opdater Bil">
     </form>
   </div>
 </section>

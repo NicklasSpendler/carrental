@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
 <body>
-<h1>Vælg Dato</h1>
+
 
 <section id="createCustomerSection">
     <div id="createCustomerContainer">
+        <h1 class="text-center">Vælg Dato</h1>
         <form action="/createBooking" method="post">
             <label>Lejedato</label>
             <input required type="date" name="rentDate">
@@ -18,7 +19,7 @@
             <input required type="date" name="returnDate">
             <input th:value="${customerID}"  type="text" name="customerID">
             <input th:value="${carID}" type="text" name="carID">
-            <input type="submit" value="Tilføj booking">
+            <input class="mt-10" type="submit" value="Tilføj booking">
         </form>
     </div>
 </section>

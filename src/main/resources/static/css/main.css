@@ -3,6 +3,11 @@
     margin: 0px;
 }
 
+section {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Mono', monospace;
     letter-spacing: 2px;
@@ -11,6 +16,20 @@ h1, h2, h3, h4, h5, h6 {
 p, a, button, span, input, label {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
+}
+
+label {
+    padding-left: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* Home index */
@@ -179,9 +198,7 @@ p, a, button, span, input, label {
     display: none;
 }
 
-#customerSection {
-    display: flex;
-}
+
 
 
 #customerContainer {
