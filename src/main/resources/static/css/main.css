@@ -3,6 +3,11 @@
     margin: 0px;
 }
 
+:root {
+    --clr-neon: hsl(317, 100%, 54%);
+    --clr-bg: hsl(323, 21%, 16%);
+}
+
 section {
     padding-top: 10px;
     padding-left: 10px;
@@ -160,10 +165,11 @@ label {
     justify-content: center;
     align-items: center;
     height: 50%;
+    background-color: var(--clr-bg);
 }
 
 #homeSection .right #settings h2 {
-    color: black;
+    color: white;
     font-size: 35px;
     margin-bottom: 32px;
     text-transform: uppercase;
@@ -171,25 +177,79 @@ label {
 }
 
 #homeSection .right #settings button {
+    /*
+
+
+    color: black;
+    font-weight: 700;
+
+    font-size: 16px;
+    cursor: pointer;
+
+
+     */
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 12.8px;
     padding-top: 12.8px;
     text-transform: uppercase;
-    border: 2px solid black;
     letter-spacing: .1em;
-    color: black;
-    font-weight: 700;
     background-color: transparent;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 1s all;
+    border-radius: 0.25em;
+    text-shadow: 0 0 1.5em hsl(0, 0%, calc(100%/0.5)), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    transition: all 100ms linear;
 }
 
+#homeSection .right #settings button:before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(2em) rotateX(30deg) scale(1, 0.35);
+    filter: blur(1.5em);
+}
+
+#homeSection .right #settings button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+#homeSection .right #settings button:hover,
+#homeSection .right #settings button:focus {
+    background: var(--clr-neon);
+    color: var(--clr-bg);
+    text-shadow: none;
+
+}
+#homeSection .right #settings button:hover::after {
+    opacity: 1;
+}
+/*
 #homeSection .right #settings button:hover {
     background-color: #313131;
     color: white;
 }
+
+ */
 
 .bg-overlay {
     background-color: rgba(0, 0, 0, 0.35);
