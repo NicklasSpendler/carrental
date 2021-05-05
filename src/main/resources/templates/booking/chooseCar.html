@@ -17,7 +17,7 @@
             <p class="tableHeadData">Reg Number</p>
             <p class="tableHeadData">First Reg Year Month</p>
             <p class="tableHeadData">Kilometer kørt</p>
-            <p class="tableHeadData">Ekstra</p>
+            <p class="tableHeadData">Vælg bil</p>
         </div>
         <div class="customer" th:each="car: ${carList}">
             <p th:text="${car.carType}"></p>
@@ -27,7 +27,7 @@
             <p th:text="${car.firstRegYearMonth}"></p>
             <p th:text="${car.kmDriven}"></p>
             <div>
-                <a th:href="@{'/chooseBookingDates/'+${customerID}+'/'+${car.carID}}"><i title="Se Bil" class="fas fa-user"></i></a>
+                <a th:href="@{'/chooseBookingDates/'+${customerID}+'/'+${car.carID}}"><i title="Vælg Bil" class="fas fa-car"></i></a>
             </div>
         </div>
     </div>
